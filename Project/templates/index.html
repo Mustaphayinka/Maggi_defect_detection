@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maggi Defect Detection</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Maggi Defect Detection</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="imageUpload">Upload an image:</label>
+                <input type="file" class="form-control-file" id="imageUpload" name="file" accept=".jpg, .jpeg, .png">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+        {% if message %}
+        <div class="mt-4">
+            <p class="alert alert-info">{{ message }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
